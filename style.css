@@ -1,6 +1,10 @@
 body {
   margin: 0px;
+  background-color: #121212;
 }
+
+
+/* -- ESTILOS DEL MENÚ DE NAVEGACIÓN -- */
 
 .menu {
   position: fixed;
@@ -44,7 +48,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #c5c6c9;
+  color: #ffdcb5;
   text-decoration: none;
   padding-bottom: 4px;
   transition: color 0.2s ease, border-color 0.2s ease;
@@ -73,5 +77,94 @@ body {
 }
 
 .menu-nav__btn-unirse:hover {
-  background-color: #e5bf98;
+  background-color: #e64a19;
+}
+
+
+/* -- ESTILOS DE LA SECCIÓN "HERO" -- */
+
+.hero {
+  background-image: 
+    linear-gradient(rgba(26, 28, 30, 0.7), rgba(26, 28, 30, 0.4)), 
+    url('img/kb2_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 7rem 24px;
+  align-items: center;
+  position: relative;
+}
+
+.hero__contenedor {
+  max-width: 42rem;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+.hero__pre-titulo {
+  color: #ff5722;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: -2rem;
+}
+
+.hero__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero__titulo span {
+  color: #ff5722;
+}
+
+.hero__descripcion {
+  color: #d0cdcc;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 38rem;
+}
+
+.hero__btn-contacto,
+.hero__btn-rutinas {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  margin-right: 0.75rem;
+}
+
+.hero__btn-contacto {
+  background-color: #ff5722;
+  color: #e5e2e1;
+  border: 2px solid #ff5722;
+}
+
+.hero__btn-contacto:hover {
+  background-color: #e64a19;
+}
+
+.hero__btn-rutinas {
+  background-color: transparent;
+  color: #e5e2e1;
+  border: 2px solid #5b4039;
+}
+
+.hero__btn-rutinas:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
