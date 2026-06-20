@@ -13,4 +13,12 @@
   - sección mostrando la ubicación con un mapa
   - formulario de contacto
 
+## Convención de nombres para CSS
 
+- se usará BEM
+
+BEM divide los nombres de las clases en tres partes:
+
+- Bloque (.componente): el contenedor principal (ej. .tarjeta, .menu, .formulario)
+- Elemento (.componente__elemento): es un elemento dentro del contenedor principal y que no está suelto por fuera (se usa doble guión bajo __)(ej. .tarjeta__titulo, .tarjeta__boton)
+- Modificador (.componente--modificador): es una variante de estado o estilo de un elemento (se usa doble guión medio --) (ej. .tarjeta--destacada, .boton--error)
