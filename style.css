@@ -21,7 +21,7 @@ body {
   max-width: 1280px;
   height: 4rem;
   margin: 0 auto;
-  padding: 8px 24px;
+  padding: 1rem 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@ body {
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #ffdcb5;
+  color: #ffb5a0;
   text-decoration: none;
   letter-spacing: -0.5px;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .menu-nav__enlace:hover {
-  color: #ffdcb5;
+  color: #ffb5a0;
 }
 
 .menu-nav__enlace--activo {
@@ -168,3 +168,103 @@ body {
 .hero__btn-rutinas:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+/* -- ESTILOS DE LA SECCIÓN CLASES -- */
+
+.clases {
+  background-color: #0e0e0e;
+  min-height: 80vh;
+  padding: 5rem 24px;
+}
+
+.clases__card-icono {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 87, 34, 0.15);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clases__card-icono img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.clases__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.clases__titulo span {
+  color: #ff5722;
+}
+
+.clases__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.clases__card {
+  background-color: #1e1e1e;
+  border: 1px solid #2c2c2c;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 340px;
+  text-align: left;
+}
+
+.clases__card:hover {
+  border-color: #ff5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+.clases__card h3 {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e5e2e1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+.clases__card-descripcion {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffdcb5;
+  margin-bottom: 1.5rem;
+}
+
+.clases__card-etiqueta {
+  display: inline-block;
+  background-color: #353534;
+  color: #ffdcb5;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.9rem;
+  margin-top: 0.5rem;
+}
+
