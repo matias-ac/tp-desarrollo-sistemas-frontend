@@ -90,7 +90,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 7rem 24px;
   align-items: center;
   position: relative;
@@ -274,7 +274,7 @@ body {
 .horarios {
   background-color: #131313;
   min-height: 80vh;
-  padding: 5rem 24px;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,3 +349,62 @@ body {
   background-color: #353534;
 }
 
+
+/* -- ESTILOS DE LA SECCIÓN GALERÍA -- */
+
+.galeria {
+  background-color: #0e0e0e;
+  min-height: 80vh;
+  padding: 5rem 3rem;
+}
+
+.galeria__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.galeria__titulo span {
+  color: #ff5722;
+}
+
+.galeria-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 1rem 10rem;
+  background-color: #0e0e0e;
+}
+
+.galeria-contenedor__imagen {
+  padding: 0;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid #5b4039;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.galeria-contenedor__imagen:hover {
+  border-color: #ff5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+.galeria-contenedor__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.galeria-contenedor__imagen img:hover {
+   transform: scale(1.1);
+}
