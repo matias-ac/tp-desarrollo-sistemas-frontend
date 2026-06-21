@@ -178,21 +178,12 @@ body {
   padding: 5rem 24px;
 }
 
-.clases__card-icono {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
-  background-color: rgba(255, 87, 34, 0.15);
-  border-radius: 0.5rem;
+.clases__contenedor {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
-}
-
-.clases__card-icono img {
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
+  margin: 0 auto;
 }
 
 .clases__titulo {
@@ -211,14 +202,6 @@ body {
   color: #ff5722;
 }
 
-.clases__contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 0 auto;
-}
-
 .clases__card {
   background-color: #1e1e1e;
   border: 1px solid #2c2c2c;
@@ -231,6 +214,23 @@ body {
 .clases__card:hover {
   border-color: #ff5722;
   box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+.clases__card-icono {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 87, 34, 0.15);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clases__card-icono img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 .clases__card h3 {
@@ -266,5 +266,86 @@ body {
   letter-spacing: 1px;
   padding: 0.3rem 0.9rem;
   margin-top: 0.5rem;
+}
+
+
+/* -- ESTILOS DE LA SECCIÓN HORARIOS -- */
+
+.horarios {
+  background-color: #131313;
+  min-height: 80vh;
+  padding: 5rem 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.horarios__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.horarios__titulo span {
+  color: #ff5722;
+}
+
+.horarios__descripcion {
+  color: #ffb5a0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.horarios__tabla {
+  width: 100%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #201f1f;
+  border: 2px solid #5b4039;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.horarios__tabla-header {
+  background-color: #2a2c2e;
+}
+
+.horarios__tabla-fila {
+  border: 2px solid #5b4039;
+}
+
+.horarios__tabla-header th {
+  color: #e5e2e1;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: none;
+}
+
+.horarios__tabla-body td {
+  color: #e5e2e1;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+.horarios__tabla-body td:first-child {
+  font-weight: 600;
+  color: #ffb5a0;
+}
+
+.horarios__tabla-body tr:hover {
+  background-color: #353534;
 }
 
