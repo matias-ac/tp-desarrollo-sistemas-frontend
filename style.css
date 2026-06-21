@@ -28,12 +28,27 @@ body {
 }
 
 .menu-nav__logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.menu-nav__logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.menu-nav__logo span {
   font-family: 'Archivo Narrow', sans-serif;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: 700;
   color: #ffb5a0;
-  text-decoration: none;
   letter-spacing: -0.5px;
+  text-transform: uppercase;
+  line-height: 1
 }
 
 .menu-nav__lista {
@@ -46,17 +61,17 @@ body {
 
 .menu-nav__enlace {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   color: #ffdcb5;
   text-decoration: none;
   padding-bottom: 4px;
   transition: color 0.2s ease, border-color 0.2s ease;
-  border-bottom: 2px solid transparent;
 }
 
 .menu-nav__enlace:hover {
   color: #ffb5a0;
+  border-bottom: 4px solid #ffb5a0;
 }
 
 .menu-nav__enlace--activo {
@@ -66,7 +81,7 @@ body {
 
 .menu-nav__btn-unirse {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   background-color: #ff5722;
   color: #ffdcb5;
@@ -85,13 +100,14 @@ body {
 
 .hero {
   background-image: 
-    linear-gradient(rgba(26, 28, 30, 0.7), rgba(26, 28, 30, 0.4)), 
+    linear-gradient(to bottom, rgba(14, 14, 14, 0) 70%, #0e0e0e 100%),
+    linear-gradient(rgba(26, 28, 30, 0.7), rgba(26, 28, 30, 0.4)),
     url('img/kb2_hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 80vh;
-  padding: 7rem 24px;
+  min-height: 100vh;
+  padding: 10rem 2rem;
   align-items: center;
   position: relative;
 }
@@ -117,6 +133,8 @@ body {
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 4rem;
   font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
@@ -127,9 +145,10 @@ body {
 }
 
 .hero__descripcion {
-  color: #d0cdcc;
+  color: #ffb5a0;
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 1.125rem;
+  text-align: justify;
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 38rem;
@@ -174,8 +193,12 @@ body {
 
 .clases {
   background-color: #0e0e0e;
-  min-height: 80vh;
-  padding: 5rem 24px;
+  min-height: 50vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .clases__contenedor {
@@ -183,7 +206,8 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .clases__titulo {
@@ -209,6 +233,7 @@ body {
   padding: 2rem;
   max-width: 340px;
   text-align: left;
+  flex: 1 1 280px;
 }
 
 .clases__card:hover {
@@ -241,15 +266,13 @@ body {
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  box-sizing: border-box;
-  border-width: 0;
-  border-style: solid;
-  border-color: #e5e7eb;
 }
 
 .clases__card-descripcion {
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 1rem;
+  text-align: justify;
+  text-justify: distribute;
   line-height: 1.5;
   color: #ffdcb5;
   margin-bottom: 1.5rem;
@@ -273,8 +296,8 @@ body {
 
 .horarios {
   background-color: #131313;
-  min-height: 80vh;
-  padding: 3rem;
+  min-height: 50vh;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -354,8 +377,8 @@ body {
 
 .galeria {
   background-color: #0e0e0e;
-  min-height: 80vh;
-  padding: 5rem 3rem;
+  min-height: 50vh;
+  padding: 5rem 2rem;
 }
 
 .galeria__titulo {
@@ -385,9 +408,8 @@ body {
 .galeria-contenedor__imagen {
   padding: 0;
   margin: 5px;
-  background-color: white;
-  border: 2px solid #5b4039;
-  border-radius: 12px;
+  border: 2px solid #0e0e0e;
+  border-radius: 20px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
 }
