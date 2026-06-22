@@ -91,6 +91,25 @@ body {
   background-color: #e64a19;
 }
 
+.menu-nav__hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-nav__hamburguesa-linea {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #ffdcb5;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
 
 /* -- ESTILOS DE LA SECCIÓN "HERO" -- */
 
@@ -806,16 +825,26 @@ body {
 
 @media (max-width: 768px) {
   .menu-nav {
-    flex-direction: column;
+    flex-wrap: wrap;
     height: auto;
-    gap: 1rem;
     padding: 1rem;
   }
 
+  .menu-nav__hamburguesa {
+    display: flex;
+  }
+
   .menu-nav__lista {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     gap: 15px;
+    padding: 1rem 0 0;
+  }
+
+  .menu-nav__lista--abierto {
+    display: flex;
   }
 
   .clases,
@@ -851,9 +880,7 @@ body {
   .hero__btn-contacto, 
   .hero__btn-rutinas {
     display: block;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
   }
 
   .galeria-contenedor {
