@@ -817,3 +817,66 @@ body {
 .contacto__btn:hover {
   background-color: #e64a19;
 }
+
+
+/* -- ADAPTACIÓN RESPONSIVE A DISPOSITIVOS MÓVILES -- */
+
+@media (max-width: 768px) {
+  .menu-nav {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .menu-nav__lista {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 8rem 1rem;
+  }
+
+  .hero__contenedor {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero__titulo {
+    font-size: 2.5rem; 
+  }
+
+  .hero__btn-contacto, 
+  .hero__btn-rutinas {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .galeria-contenedor {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .horarios__tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .horarios__tabla {
+    min-width: 600px;
+  }
+
+  .rutina__semana,
+  .rutina__wod-contenedor {
+    flex: 1 1 100%;
+  }
+
+  .contacto__grupo--inline {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
