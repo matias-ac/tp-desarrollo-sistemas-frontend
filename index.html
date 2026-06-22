@@ -164,26 +164,28 @@
 					</div>
 				</div>
 		</section>
-		<section id="contacto">
-			<h2>¿LISTO PARA EL CAMBIO?</h2>
-			<p>Dejanos tus datos y nos pondremos en contacto para tu primera clase gratuita.</p>
-			<form action="#" method="POST">
-				<div>
-					<div>
-						<label for="nombre">NOMBRE COMPLETO</label>
-						<input type="text" id="nombre" placeholder="Tu nombre">
+		<section id="contacto" class="contacto">
+			<div class="contacto__contenedor">
+				<h2 class="contacto__titulo">¿Listo para el <span>cambio</span>?</h2>
+				<p class="contacto__descripcion">Dejanos tus datos y nos pondremos en contacto para tu primera clase gratuita.</p>
+				<form action="#" method="POST" class="contacto__form">
+					<div class="contacto__grupo contacto__grupo--inline">
+						<div class="contacto__grupo">
+							<label for="nombre" class="contacto__label">Nombre completo</label>
+							<input type="text" id="nombre" class="contacto__input" placeholder="Tu nombre">
+						</div>
+						<div class="contacto__grupo">
+							<label for="email" class="contacto__label">Email</label>
+							<input type="email" id="email" name="email" class="contacto__input" placeholder="email@ejemplo.com">
+						</div>
 					</div>
-					<div>
-						<label for="email">EMAIL</label>
-						<input type="email" id="email" name="email" placeholder="email@ejemplo.com">
+					<div class="contacto__grupo">
+						<label for="mensaje" class="contacto__label">¿Cuál es tu objetivo?</label>
+						<textarea id="mensaje" name="mensaje" class="contacto__textarea" placeholder="Contanos brevemente..."></textarea>
 					</div>
-				</div>
-				<div>
-					<label for="mensaje">¿CUÁL ES TU OBJETIVO?</label>
-					<textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente..."></textarea>
-				</div>
-				<button>ENVIAR SOLICITUD DE REGISTRO</button>
-			</form>
+					<button type="submit" class="contacto__btn">Enviar solicitud de registro</button>
+				</form>
+			</div>
 		</section>
 	</main>
 	<footer>

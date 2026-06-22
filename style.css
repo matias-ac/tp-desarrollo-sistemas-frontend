@@ -601,9 +601,9 @@ body {
 .rutina__wod-contenedor {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   border-style: dashed;
   border-width: 2px;
   border-radius: 1rem;
@@ -678,5 +678,142 @@ body {
 }
 
 .rutina__wod-btn:hover {
+  background-color: #e64a19;
+}
+
+
+/* -- ESTILOS DE LA SECCIÓN CONTACTO -- */
+
+.contacto {
+  background-color: #0e0e0e;
+  min-height: 50vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto__contenedor {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contacto__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contacto__titulo span {
+  color: #ff5722;
+}
+
+.contacto__descripcion {
+  color: #ffb5a0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  color: #ffb5a0;
+}
+
+.contacto__grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.contacto__grupo--inline {
+  flex-direction: row;
+  gap: rem;
+  width: 100%;
+}
+
+.contacto__grupo,
+.contacto__grupo--inline {
+  flex: 1;
+}
+
+.contacto__label {
+  color: #ffb5a0;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contacto__input {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  background-color: #1c1b1b;
+  border: 1px solid #2c2c2c;
+  border-radius: 6px;
+  /* border-color: #ab8980; */
+  /* border-width: 1px; */
+  padding: 1rem;
+}
+
+.contacto__textarea {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  background-color: #1a1a1a;
+  border: 1px solid #2c2c2c;
+  border-radius: 6px;
+  padding: 1rem;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contacto__input::placeholder,
+.contacto__textarea::placeholder {
+  color: #4a4a4a;
+}
+
+.contacto__input:hover,
+.contacto__textarea:hover {
+  border-color: #ff5722;
+}
+
+.contacto__input:focus,
+.contacto__textarea:focus {
+  outline: none;
+  border: 2px solid #ff5722;
+}
+
+.contacto__btn {
+  background-color: #ff5722;
+  color: #541200;
+  border: 2px solid #ff5722;
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.contacto__btn:hover {
   background-color: #e64a19;
 }
