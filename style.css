@@ -48,7 +48,7 @@ body {
   color: #ffb5a0;
   letter-spacing: -0.5px;
   text-transform: uppercase;
-  line-height: 1
+  line-height: 1;
 }
 
 .menu-nav__lista {
@@ -67,6 +67,7 @@ body {
   text-decoration: none;
   padding-bottom: 4px;
   transition: color 0.2s ease, border-color 0.2s ease;
+  text-transform: uppercase;
 }
 
 .menu-nav__enlace:hover {
@@ -74,17 +75,12 @@ body {
   border-bottom: 4px solid #ffb5a0;
 }
 
-.menu-nav__enlace--activo {
-  color: #ffdcb5;
-  border-color: #ffdcb5;
-}
-
 .menu-nav__btn-unirse {
   font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 600;
   background-color: #ff5722;
-  color: #ffdcb5;
+  color: #541200;
   padding: 10px 20px;
   border-radius: 3px;
   text-decoration: none;
@@ -106,8 +102,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  padding: 10rem 2rem;
+  padding: 12rem 2rem 6rem 2rem;
   align-items: center;
   position: relative;
 }
@@ -170,7 +165,7 @@ body {
 
 .hero__btn-contacto {
   background-color: #ff5722;
-  color: #e5e2e1;
+  color: #541200;
   border: 2px solid #ff5722;
 }
 
@@ -193,7 +188,6 @@ body {
 
 .clases {
   background-color: #0e0e0e;
-  min-height: 50vh;
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -296,7 +290,6 @@ body {
 
 .horarios {
   background-color: #131313;
-  min-height: 50vh;
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -377,7 +370,6 @@ body {
 
 .galeria {
   background-color: #0e0e0e;
-  min-height: 50vh;
   padding: 5rem 2rem;
 }
 
@@ -399,7 +391,7 @@ body {
 .galeria-contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   padding: 1rem 10rem;
   background-color: #0e0e0e;
@@ -436,7 +428,6 @@ body {
 
 .blog {
   background-color: #131313;
-  min-height: 50vh;
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -485,15 +476,12 @@ body {
 
 .blog__articulo-etiqueta {
   display: inline-block;
-  /* background-color: #353534; */
   color: #ffb5a0;
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  /* padding: 0.3rem 0.9rem; */
-  /* margin-top: 0.5rem; */
 }
 
 .blog__articulo-titulo {
@@ -532,7 +520,6 @@ body {
   border: 2px solid #5b4039;
   border-radius: 35px;
   margin: 3rem;
-  min-height: 50vh;
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -657,8 +644,7 @@ body {
   padding: 1.5rem;
   border-width: 1px;
   border-radius: 0.5rem;
-  border-color: rgba(225, 181, 160, 0.2)
-
+  border-color: rgba(225, 181, 160, 0.2);
 }
 
 .rutina__wod-btn {
@@ -686,7 +672,6 @@ body {
 
 .contacto {
   background-color: #0e0e0e;
-  min-height: 50vh;
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -740,7 +725,7 @@ body {
 
 .contacto__grupo--inline {
   flex-direction: row;
-  gap: rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -764,8 +749,6 @@ body {
   background-color: #1c1b1b;
   border: 1px solid #2c2c2c;
   border-radius: 6px;
-  /* border-color: #ab8980; */
-  /* border-width: 1px; */
   padding: 1rem;
 }
 
@@ -819,7 +802,7 @@ body {
 }
 
 
-/* -- ADAPTACIÓN RESPONSIVE A DISPOSITIVOS MÓVILES -- */
+/* -- ADAPTACIÓN RESPONSIVE A TABLETS -- */
 
 @media (max-width: 768px) {
   .menu-nav {
@@ -835,8 +818,25 @@ body {
     gap: 15px;
   }
 
+  .clases,
+  .horarios,
+  .galeria,
+  .blog,
+  .contacto {
+    padding: 4rem 1.5rem;
+  }
+
+  .clases__titulo,
+  .horarios__titulo,
+  .galeria__titulo,
+  .blog__titulo,
+  .rutina__titulo,
+  .contacto__titulo {
+    font-size: 2.2rem;
+  }
+
   .hero {
-    padding: 8rem 1rem;
+    padding: 8rem 1.5rem;
   }
 
   .hero__contenedor {
@@ -870,6 +870,15 @@ body {
     min-width: 600px;
   }
 
+  .horarios__tabla-header th,
+  .horarios__tabla-body td {
+    padding: 1rem;
+  }
+
+  .rutina {
+    margin: 2rem;
+  }
+
   .rutina__semana,
   .rutina__wod-contenedor {
     flex: 1 1 100%;
@@ -878,5 +887,111 @@ body {
   .contacto__grupo--inline {
     flex-direction: column;
     gap: 1.5rem;
+  }
+}
+
+
+/* -- ADAPTACIÓN RESPONSIVE A CELULARES -- */
+
+@media (max-width: 480px) {
+  .menu-nav__logo span {
+    font-size: 24px;
+  }
+
+  .menu-nav__enlace {
+    font-size: 14px;
+  }
+
+  .menu-nav__btn-unirse {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .hero {
+    padding: 6rem 1rem;
+  }
+
+  .hero__contenedor {
+    margin-top: 0;
+  }
+
+  .hero__pre-titulo {
+    font-size: 0.75rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .hero__titulo {
+    font-size: 1.8rem;
+  }
+
+  .hero__descripcion {
+    font-size: 0.95rem;
+  }
+
+  .hero__btn-contacto,
+  .hero__btn-rutinas {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .clases,
+  .horarios,
+  .galeria,
+  .blog,
+  .contacto {
+    padding: 3rem 1rem;
+  }
+
+  .clases__titulo,
+  .horarios__titulo,
+  .galeria__titulo,
+  .blog__titulo,
+  .rutina__titulo,
+  .contacto__titulo {
+    font-size: 1.8rem;
+  }
+
+  .horarios__tabla-header th,
+  .horarios__tabla-body td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .galeria-contenedor {
+    padding: 0.5rem;
+    gap: 10px;
+  }
+
+  .rutina {
+    margin: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+  }
+
+  .rutina__wod-contenedor {
+    padding: 20px;
+  }
+
+  .rutina__wod-titulo {
+    font-size: 1.5rem;
+  }
+
+  .rutina__wod-ejercicios {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .rutina__wod-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .blog__articulo-titulo {
+    font-size: 1.1rem;
+  }
+
+  .contacto__input,
+  .contacto__textarea {
+    padding: 0.8rem;
   }
 }
