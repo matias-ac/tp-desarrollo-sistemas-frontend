@@ -523,3 +523,160 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
 }
+
+
+/* -- ESTILOS DE LA SECCIÓN RUTINAS -- */
+
+.rutina {
+  background-color: #1e1e1e;
+  border: 2px solid #5b4039;
+  border-radius: 35px;
+  margin: 3rem;
+  min-height: 50vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rutina__titulo {
+  color: #e5e2e1;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rutina__titulo span {
+  color: #ff5722;
+}
+
+.rutina__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.rutina__semana {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 45%;
+}
+
+.rutina__dia {
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #ffb5a0;
+  background-color: rgba(53, 53, 52, 0.5);
+  display: flex;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.rutina__dia span {
+  font-family: 'Inter', sans-serif;
+  color: #541200;
+  background-color: #ff5722;
+  width: 2rem;
+  height: 2rem;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 0.75rem;
+}
+
+.rutina__wod-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-color: #ab8980;
+  background-color: #353534;
+  flex: 1 1 45%;
+}
+
+.rutina__wod-icono {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  background-color: rgba(255, 87, 34, 0.15);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rutina__wod-icono img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.rutina__wod-titulo {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e5e2e1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.rutina__wod-descripcion {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: distribute;
+  line-height: 1.5;
+  color: #ffdcb5;
+  margin-bottom: 1.5rem;
+}
+
+.rutina__wod-ejercicios {
+  background-color: #0e0e0e;
+  color: #ffb5a0;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 1.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  border-color: rgba(225, 181, 160, 0.2)
+
+}
+
+.rutina__wod-btn {
+  background-color: #ff5722;
+  color: #541200;
+  border: 2px solid #ff5722;
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  margin-right: 0.75rem;
+}
+
+.rutina__wod-btn:hover {
+  background-color: #e64a19;
+}
