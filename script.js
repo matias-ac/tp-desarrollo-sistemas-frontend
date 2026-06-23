@@ -43,6 +43,9 @@ const inputNombre = document.querySelector('#nombre');
 const inputEmail = document.querySelector('#email');
 const textareaMensaje = document.querySelector('#mensaje');
 
+const nombreValidoPattern = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
+const emailValidoPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const mensajeError = document.createElement('p');
 mensajeError.style.color = '#ff5722';
 mensajeError.style.fontFamily = "'Archivo Narrow', sans-serif";
@@ -63,7 +66,7 @@ formulario.addEventListener('submit', (event) => {
     return;
   }
 
-  if (!/^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/.test(nombre)) {
+  if (!nombreValidoPattern.test(nombre)) {
     mensajeError.textContent = 'El nombre solo puede contener letras.';
     return;
   }
@@ -73,7 +76,7 @@ formulario.addEventListener('submit', (event) => {
     return;
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!emailValidoPattern.test(email)) {
     mensajeError.textContent = 'Ingresá un email válido.';
     return;
   }
