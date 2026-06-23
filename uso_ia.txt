@@ -1,0 +1,76 @@
+Herramienta utilizada: Google Stitch
+
+Uso realizado:
+
+- Utilicé la herramienta para generar un diseño preliminar que me sirva de guía visual para trabajar en la landing page de la temática seleccionada (centro de entrenamiento con Kettlebells y Running).
+- Indiqué las secciones deseadas y arquitectura base (landing) de la temática elegida.
+
+Partes asistidas:
+
+- Obtuve un diseño inicial mediante prompt descriptivo.
+- Utilicé principalmente la imagen obtenida para tener un pantallazo visual del sitio a construir, además de algunos textos iniciales para ir maquetando el sitio, los cuales algunos fueron posteriormente modificados/mejorados.
+- Extraje varios de los colores del diseño mediante el uso de la consola del navegador para ir obteniendo los mismos, además de chequear partes del código HTML de ejemplo para el mismo fin.
+- Mantuve la 2 fuentes que venían con el diseño ya que fueron de mi agrado ('Archivo Narrow' e 'Inter').
+
+Modificaciones propias:
+
+- Partiendo de la imagen que la herramienta genera, maqueté el código HTML utilizando las etiquetas semánticas solicitadas en la consigna, construyendo los bloques de código de manera iterativa e incremental.
+- La herramienta otorga, además de una imagen, el código HTMl utilizando TailwindCSS (no se usó), no obstante esto, desarrollé el código HTML, CSS y JavaScript de forma nativa sin uso del framework.
+- Utilicé BEM como convención de CSS para el nombrado de las clases, lo que me facilitó el desarrollo de cada sección y sus respectivos elementos.
+
+Comprensión:
+
+- Puedo explicar la maquetación utilizada, además de las clases CSS con sus respectivos diseños.
+
+---
+
+Herramienta utilizada: ChatGPT 
+
+Uso realizado:
+
+- Utilicé la herramienta para generar imágenes para la tienda.
+
+--- 
+
+Herramienta utilizada: Google Gemini Flash 3.5 (Estándar)
+
+Uso realizado:
+
+- Utilicé la herramienta a modo de consulta de dudas y para la generación/mejora de imágenes para la tienda.
+- También la utilicé para corregir algunos bloques de código HTML y CSS, además de para entender el correcto funcionamiento de algunas etiquetas y/o propiedades, o para entender cómo hacer algo puntual.
+
+Partes asistidas:
+
+- Generé las imágenes para la sección de la tienda y/o mejoré las obtenidas con ChatGPT.
+- Entender el correcto uso de media queries y medidas relativas.
+
+Comprensión:
+
+- Puedo explicar cómo las media queries y las medidas relativas adaptan los distintos elementos, textos e imágenes de mi sitio a los distintos tamaños de pantalla.
+
+---
+
+Herramienta utilizada: Deepseek
+
+Uso realizado:
+
+- Utilicé la herramienta para desarollar el menú hamburguesa utilizado en el diseño responsive.
+- También la utilicé para guiarme en el desarrollo del código JavaScript referente a la validación del formulario.
+- Otro uso que le di fue para la mejora de algunos estilos CSS.
+
+Partes asistidas:
+
+- Obtuve el código relacionado con el menú hamburguesa y lo adapté a mis archivos, junto con sus estilos.
+- Validación inicial del formulario de consulta.
+- Obtención de elementos de un array de forma aleatoria.
+- Obtención de algunas propiedades CSS utilizadas en algunos de los elementos de la página para mejorar la visual de los mismos.
+
+Modificaciones propias:
+
+- Refactoricé el código obtenido en la validación del formulario, mediante la separación de disintos bloques de código en sus propias funciones, mejorando la lectura del mismo.
+- Desarrollé el código relacionado con la generación de rutinas de forma aleatoria y su correspondiente visualización en el HTML.
+
+Comprensión:
+
+- Puedo explicar cómo se valida el formulario de contacto y cómo se generan rutinas de ejercicios de forma aleatoria (JavaScript).
+- También comprendí y puedo explicar algunas de las propiedades CSS obtenidas a través del modelo.
