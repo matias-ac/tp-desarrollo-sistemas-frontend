@@ -117,7 +117,7 @@ const validarMensajeIngresado = (mensaje) => {
   return true;
 };
 
-const procesarFormulario = () => {
+const procesarFormulario = (event) => {
   event.preventDefault();
   mensajeValidacion.style.display = 'none';
 
