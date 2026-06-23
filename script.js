@@ -39,53 +39,65 @@ btnGenerarRutina.addEventListener('click', () => {
 
 // --- Validación del Formulario ---
 const formulario = document.querySelector('.contacto__form');
-const inputNombre = document.querySelector('#nombre');
-const inputEmail = document.querySelector('#email');
-const textareaMensaje = document.querySelector('#mensaje');
+const inputNombre = formulario.querySelector('#nombre');
+const inputEmail = formulario.querySelector('#email');
+const textareaMensaje = formulario.querySelector('#mensaje');
+const btnSubmit = formulario.querySelector('.contacto__btn');
 
 const nombreValidoPattern = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
 const emailValidoPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const mensajeError = document.createElement('p');
-mensajeError.style.color = '#ff5722';
-mensajeError.style.fontFamily = "'Archivo Narrow', sans-serif";
-mensajeError.style.fontSize = '0.9rem';
-mensajeError.style.margin = '0';
-formulario.insertBefore(mensajeError, formulario.querySelector('.contacto__btn'));
+const elementoMensaje = document.createElement('p');
+const mostrarMensaje = (tipo, mensaje) => {
+  elementoMensaje.style.fontFamily = "'Archivo Narrow', sans-serif";
+  elementoMensaje.style.fontSize = '0.85rem';
+  elementoMensaje.style.fontWeight = 700;
+  elementoMensaje.style.textTransform = 'uppercase';
+  elementoMensaje.style.letterSpacing = '1px';
+  elementoMensaje.style.margin = '0';
+
+  if (tipo === 'error') {
+    elementoMensaje.style.color = 'red';
+  } else {
+    elementoMensaje.style.color = 'green';
+  }
+
+  elementoMensaje.textContent = mensaje;
+  formulario.insertBefore(elementoMensaje, btnSubmit);
+};
 
 formulario.addEventListener('submit', (event) => {
   event.preventDefault();
-  mensajeError.textContent = '';
+  elementoMensaje.remove()
 
   const nombre = inputNombre.value.trim();
   const email = inputEmail.value.trim();
   const mensaje = textareaMensaje.value.trim();
 
   if (!nombre || !email || !mensaje) {
-    mensajeError.textContent = 'Completá todos los campos.';
+    mostrarMensaje('error', 'Completá todos los campos.');
     return;
   }
 
   if (!nombreValidoPattern.test(nombre)) {
-    mensajeError.textContent = 'El nombre solo puede contener letras.';
+    mostrarMensaje('error', 'El nombre solo puede contener letras.');
     return;
   }
 
   if (nombre.length < 2 || nombre.length > 100) {
-    mensajeError.textContent = 'El nombre debe tener entre 2 y 100 caracteres.';
+    mostrarMensaje('error', 'El nombre debe tener entre 2 y 100 caracteres.');
     return;
   }
 
   if (!emailValidoPattern.test(email)) {
-    mensajeError.textContent = 'Ingresá un email válido.';
+    mostrarMensaje('error', 'Ingresá un email válido.');
     return;
   }
 
   if (mensaje.length < 5 || mensaje.length > 500) {
-    mensajeError.textContent = 'El mensaje debe tener entre 5 y 500 caracteres.';
+    mostrarMensaje('error', 'El mensaje debe tener entre 5 y 500 caracteres.');
     return;
   }
 
-  mensajeError.style.color = '#4caf50';
-  mensajeError.textContent = 'Solicitud enviada correctamente. Te contactaremos pronto.';
+  mostrarMensaje('confirmación', '¡Gracias por escribirnos! Te contactaremos a la brevedad.');
 });
