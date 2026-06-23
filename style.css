@@ -338,6 +338,7 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .horarios__titulo span {
@@ -384,7 +385,7 @@ body {
 
 .horarios__tabla-body td {
   color: #e5e2e1;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
 }
 
