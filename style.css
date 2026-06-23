@@ -838,6 +838,69 @@ body {
 }
 
 
+/* -- ESTILOS DEL FOOTER -- */
+
+.footer {
+  background-color: #0e0e0e;
+  border-top: 2px solid #5b4039;
+  padding: 2rem;
+}
+
+.footer__contenedor {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__marca {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffb5a0;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.25rem;
+}
+
+.footer__copyright {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.85rem;
+  color: #5b4039;
+  margin: 0;
+}
+
+.footer__redes {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer__red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #1e1e1e;
+  border: 1px solid #2c2c2c;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer__red:hover {
+  border-color: #ff5722;
+  background-color: rgba(255, 87, 34, 0.1);
+}
+
+.footer__red-icono {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+
 /* -- ADAPTACIÓN RESPONSIVE A TABLETS -- */
 
 @media (max-width: 768px) {
@@ -936,6 +999,12 @@ body {
   .contacto__grupo--inline {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .footer__contenedor {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
   }
 }
 
