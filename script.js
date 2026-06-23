@@ -20,8 +20,6 @@ enlaces.forEach(enlace => {
 
 
 // --- Generador de Rutinas ---
-const ejerciciosContainer = document.querySelector('.rutina__wod-ejercicios');
-const btnGenerarRutina = document.querySelector('.rutina__wod-btn');
 const rutinas = [
   "AMRAP 20': 10 x KB Swings, 10 x KB Goblet Squats, 200mts x Sprint",
   "2Kb EMOM 15': 2 x Clean + 1 Press + 3 x Squat",
@@ -31,10 +29,15 @@ const rutinas = [
   "Jordan: 100 x Kb Swings + 100 x Push Ups + 100 x Air Squats + 100 x Sit Ups"
 ];
 
-btnGenerarRutina.addEventListener('click', () => {
+const ejerciciosContainer = document.querySelector('.rutina__wod-ejercicios');
+const btnGenerarRutina = document.querySelector('.rutina__wod-btn');
+
+const asignarRutinaAleatoria = () => {
   const indice = Math.floor(Math.random() * rutinas.length);
   ejerciciosContainer.textContent = rutinas[indice];
-})
+};
+
+btnGenerarRutina.addEventListener('click', asignarRutinaAleatoria);
 
 
 // --- Validación del Formulario ---
@@ -85,7 +88,7 @@ const validarEmailIngresado = (email) => {
     return false;
   }
   return true;
-}
+};
 
 const validarMensajeIngresado = (mensaje) => {
   if (mensaje.length < 5 || mensaje.length > 500) {
@@ -93,9 +96,9 @@ const validarMensajeIngresado = (mensaje) => {
     return false;
   }
   return true;
-}
+};
 
-formulario.addEventListener('submit', (event) => {
+const procesarFormulario = () => {
   event.preventDefault();
   mensajeValidacion.style.display = 'none';
 
@@ -109,4 +112,6 @@ formulario.addEventListener('submit', (event) => {
   if (!validarMensajeIngresado(mensaje)) return;
 
   mostrarMensaje('confirmación', '¡Gracias por escribirnos! Te contactaremos a la brevedad.');
-});
+};
+
+formulario.addEventListener('submit', procesarFormulario);
