@@ -42,25 +42,19 @@ const formulario = document.querySelector('.contacto__form');
 const inputNombre = formulario.querySelector('#nombre');
 const inputEmail = formulario.querySelector('#email');
 const textareaMensaje = formulario.querySelector('#mensaje');
+const mensajeValidacion = formulario.querySelector('.contacto__validacion');
 const btnSubmit = formulario.querySelector('.contacto__btn');
 
-const elementoMensaje = document.createElement('p');
 const mostrarMensaje = (tipo, mensaje) => {
-  elementoMensaje.style.fontFamily = "'Archivo Narrow', sans-serif";
-  elementoMensaje.style.fontSize = '0.85rem';
-  elementoMensaje.style.fontWeight = 700;
-  elementoMensaje.style.textTransform = 'uppercase';
-  elementoMensaje.style.letterSpacing = '1px';
-  elementoMensaje.style.margin = '0';
-
+  mensajeValidacion.style.display = 'block';
   if (tipo === 'error') {
-    elementoMensaje.style.color = 'red';
+    mensajeValidacion.style.color = 'red';
   } else {
-    elementoMensaje.style.color = 'green';
+    mensajeValidacion.style.color = 'green';
   }
 
-  elementoMensaje.textContent = mensaje;
-  formulario.insertBefore(elementoMensaje, btnSubmit);
+  mensajeValidacion.textContent = mensaje;
+  formulario.insertBefore(mensajeValidacion, btnSubmit);
 };
 
 const validarCamposCompletos = (nombre, email, mensaje) => {
@@ -103,7 +97,7 @@ const validarMensajeIngresado = (mensaje) => {
 
 formulario.addEventListener('submit', (event) => {
   event.preventDefault();
-  elementoMensaje.remove()
+  mensajeValidacion.style.display = 'none';
 
   const nombre = inputNombre.value.trim();
   const email = inputEmail.value.trim();

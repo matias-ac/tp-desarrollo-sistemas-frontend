@@ -815,6 +815,16 @@ body {
   border: 2px solid #ff5722;
 }
 
+.contacto__validacion {
+  display: none;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
 .contacto__btn {
   background-color: #ff5722;
   color: #541200;
