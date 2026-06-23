@@ -4,3 +4,6 @@ server:
 
 get-ip:
 	ip a
+
+test-unit:
+	node script.test.js
