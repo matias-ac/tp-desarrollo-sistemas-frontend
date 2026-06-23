@@ -21,20 +21,39 @@ enlaces.forEach(enlace => {
 
 // --- Generador de Rutinas ---
 const rutinas = [
-  "AMRAP 20': 10 x KB Swings, 10 x KB Goblet Squats, 200mts x Sprint",
-  "2Kb EMOM 15': 2 x Clean + 1 Press + 3 x Squat",
-  "Kb Complex x 7 sets (each arm): 6 x Row, 5 x Swing, 4 x Push Press",
-  "King Kong Complex + Squat: 5/5 x Kb Gorilla Row, 5/5 x Kb Clean + Squat",
-  "Gimli Complex x 7 sets: 5 x Kb Swings + 4 x Kb Deadlift High Pull + 3 x Kb Goblet Squat",
-  "Jordan: 100 x Kb Swings + 100 x Push Ups + 100 x Air Squats + 100 x Sit Ups"
-];
+  {
+    titulo: "AMRAP 20'",
+    ejercicios: "10 x KB Swings, 10 x KB Goblet Squats, 200mts x Sprint"
+  },
+  {
+    titulo: "2KB EMOM 15'",
+    ejercicios: "2 x Clean + 1 Press + 3 x Squat"
+  },
+  {
+    titulo: "KB Complex x 7 sets (each arm)",
+    ejercicios: "6 x Row, 5 x Swing, 4 x Push Press"
+  },
+  {
+    titulo: "King Kong Complex + Squat",
+    ejercicios: "5/5 x KB Gorilla Row, 5/5 x KB Clean & Squat"
+  },
+  {
+    titulo: "Gimli Complex x 7 sets",
+    ejercicios: "5 x KB Swings + 4 x KB Deadlift High Pull + 3 x KB Goblet Squat"
+  },
+  {
+    titulo: "Jordan",
+    ejercicios: "100 x KB Swings + 100 x Push Ups + 100 x Air Squats + 100 x Sit Ups"
+  }
+]
 
 const ejerciciosContainer = document.querySelector('.rutina__wod-ejercicios');
 const btnGenerarRutina = document.querySelector('.rutina__wod-btn');
 
 const asignarRutinaAleatoria = () => {
   const indice = Math.floor(Math.random() * rutinas.length);
-  ejerciciosContainer.textContent = rutinas[indice];
+  const rutina = `${rutinas[indice].titulo}: ${rutinas[indice].ejercicios}`;
+  ejerciciosContainer.textContent = rutina;
 };
 
 btnGenerarRutina.addEventListener('click', asignarRutinaAleatoria);
