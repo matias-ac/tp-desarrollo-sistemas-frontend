@@ -44,9 +44,6 @@ const inputEmail = formulario.querySelector('#email');
 const textareaMensaje = formulario.querySelector('#mensaje');
 const btnSubmit = formulario.querySelector('.contacto__btn');
 
-const nombreValidoPattern = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
-const emailValidoPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 const elementoMensaje = document.createElement('p');
 const mostrarMensaje = (tipo, mensaje) => {
   elementoMensaje.style.fontFamily = "'Archivo Narrow', sans-serif";
@@ -66,6 +63,44 @@ const mostrarMensaje = (tipo, mensaje) => {
   formulario.insertBefore(elementoMensaje, btnSubmit);
 };
 
+const validarCamposCompletos = (nombre, email, mensaje) => {
+  if (!nombre || !email || !mensaje) {
+    mostrarMensaje('error', 'Por favor completá todos los campos.');
+    return false;
+  }
+  return true;
+};
+
+const validarNombreIngresado = (nombre) => {
+  const nombreValidoPattern = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$/;
+  if (!nombreValidoPattern.test(nombre)) {
+    mostrarMensaje('error', 'El nombre solo puede contener letras.');
+    return false;
+  }
+  if (nombre.length < 2 || nombre.length > 100) {
+    mostrarMensaje('error', 'El nombre debe tener entre 2 y 100 caracteres.');
+    return false;
+  }
+  return true;
+};
+
+const validarEmailIngresado = (email) => {
+  const emailValidoPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailValidoPattern.test(email)) {
+    mostrarMensaje('error', 'Ingresá un email válido.');
+    return false;
+  }
+  return true;
+}
+
+const validarMensajeIngresado = (mensaje) => {
+  if (mensaje.length < 5 || mensaje.length > 500) {
+    mostrarMensaje('error', 'El mensaje debe tener entre 5 y 500 caracteres.');
+    return false;
+  }
+  return true;
+}
+
 formulario.addEventListener('submit', (event) => {
   event.preventDefault();
   elementoMensaje.remove()
@@ -74,30 +109,10 @@ formulario.addEventListener('submit', (event) => {
   const email = inputEmail.value.trim();
   const mensaje = textareaMensaje.value.trim();
 
-  if (!nombre || !email || !mensaje) {
-    mostrarMensaje('error', 'Completá todos los campos.');
-    return;
-  }
-
-  if (!nombreValidoPattern.test(nombre)) {
-    mostrarMensaje('error', 'El nombre solo puede contener letras.');
-    return;
-  }
-
-  if (nombre.length < 2 || nombre.length > 100) {
-    mostrarMensaje('error', 'El nombre debe tener entre 2 y 100 caracteres.');
-    return;
-  }
-
-  if (!emailValidoPattern.test(email)) {
-    mostrarMensaje('error', 'Ingresá un email válido.');
-    return;
-  }
-
-  if (mensaje.length < 5 || mensaje.length > 500) {
-    mostrarMensaje('error', 'El mensaje debe tener entre 5 y 500 caracteres.');
-    return;
-  }
+  if (!validarCamposCompletos(nombre, email, mensaje)) return;
+  if (!validarNombreIngresado(nombre)) return;
+  if (!validarEmailIngresado(email)) return;
+  if (!validarMensajeIngresado(mensaje)) return;
 
   mostrarMensaje('confirmación', '¡Gracias por escribirnos! Te contactaremos a la brevedad.');
 });
