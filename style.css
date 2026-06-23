@@ -586,10 +586,14 @@ body {
 .rutina__semana {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   flex: 1 1 45%;
+}
+
+.rutina__semana ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .rutina__dia {
